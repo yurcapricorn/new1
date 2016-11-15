@@ -41,7 +41,13 @@ public class matrix {
             this.arr=arr;
         }
         public Matrix(int[][] c){
-            this.arr=c;
+            int[][] arr2 = new int[c.length][c[0].length];
+            for (int i=0;i<c.length;i++){
+                for (int j=0;j<c[0].length;j++){
+                    arr2[i][j]=c[i][j];
+                }
+            }
+            this.arr=arr2;
         }
         public Matrix(Matrix matrix){
             this.arr=matrix.arr;
@@ -53,7 +59,7 @@ public class matrix {
 
         public static void print(Matrix matrix){
             int[][] arr = matrix.arr;
-            System.out.println(arr.length+"x"+arr[0].length);
+         //   System.out.println(arr.length+"x"+arr[0].length);
             for (int i=0;i<arr.length;i++){
                 for (int j=0;j<arr[0].length;j++){
                     System.out.print(arr[i][j]+" ");
